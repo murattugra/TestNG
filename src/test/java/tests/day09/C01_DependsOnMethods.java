@@ -79,7 +79,7 @@ public class C01_DependsOnMethods {
     @AfterClass
     public void treaDown(){
 
-
+driver.close();
     }
 
 
