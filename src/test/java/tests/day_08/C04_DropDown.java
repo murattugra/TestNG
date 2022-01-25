@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -30,53 +31,56 @@ public class C04_DropDown {
     //    4. Sonucun Java kelimesini icerdigini test edin
 
     WebDriver driver;
-    WebElement dropdown;
+    WebElement dropDowselement;
     Select select;
     @BeforeClass
-    public void  setup(){
+    public void setup(){
         WebDriverManager.chromedriver().setup();
         driver =new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.amazon.com/");
 
+    }
 
 
-        // - Test 1
+    @Test(priority = 1)
+    public void kategoriSayisiTesti(){
+        //-Test 1
         //Arama kutusunun yanindaki kategori menusundeki kategori sayisinin 45
         //oldugunu test edin
-    }
-    @Test(priority = 1)
-    public  void test01(){
-        dropdown=driver.findElement(By.xpath("searchDropdownBox"));
-
-       select=new Select(dropdown);
-
+        dropDowselement=driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
+        select=new Select(dropDowselement);
         List<WebElement> optionsList=select.getOptions();
-        int expectedResult=45;
-        int actualoptionsCount=optionsList.size();
-
-        Assert.assertEquals(actualoptionsCount,expectedResult,"45 adet kategero yoktur");
-
+        int actualOptionsCount=optionsList.size();
+        int expectedOptionsCount=45;
+        Assert.assertEquals(actualOptionsCount,expectedOptionsCount,"Options sayisi beklenen degerde degil");
 
     }
-    //-Test 2
-    //    1. Kategori menusunden Books secenegini  secin
-    //    2. Arama kutusuna Java yazin ve aratin
-    //    3. Bulunan sonuc sayisini yazdirin
-    //    4. Sonucun Java kelimesini icerdigini test edin
-
 
     @Test(priority = 2)
-    public  void tets02(){
-    dropdown=driver.findElement(By.xpath("searchDropdownBox"));
-    select.selectByVisibleText("Books");
-    WebElement seachBox = (WebElement) driver.findElements(By.id("twotabsearchtextbox"));
-    seachBox.sendKeys("Java"+ Keys.ENTER);
+    public  void booksDropDownTest(){
+        //-Test 2
+        //    1. Kategori menusunden Books secenegini  secin
+        select.selectByValue("search-alias=stripbooks-intl-ship");
+        //    2. Arama kutusuna Java yazin ve aratin
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Java"+Keys.ENTER);
+        //    3. Bulunan sonuc sayisini yazdirin
+        WebElement resultTextElement=driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
+        System.out.println(resultTextElement.getText());
+        //    4. Sonucun Java kelimesini icerdigini test edin
+        String  actualResultTextString=resultTextElement.getText();
+        String expectedResult="Java";
+        Assert.assertTrue(actualResultTextString.contains(expectedResult));
+
+    }
 
 
-}
+    @AfterClass
+    public void treaDown(){
+        driver.close();
 
+    }
 
+   }
 
-}
