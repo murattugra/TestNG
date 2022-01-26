@@ -2,6 +2,7 @@ package MeineUbungen;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -57,10 +58,6 @@ public  void  test01(){
     Assert.assertEquals(actualTextStr2,expectedResult2);
 
     //● Bir önceki pencereye geri döndükten sonra sayfa başlığının “The Internet” olduğunu doğrulayın.
-
-    //driver.navigate().
-   // Assert.assertEquals(actualTitle1,expectedTitle1);
-
 
 
 
