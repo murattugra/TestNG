@@ -17,8 +17,6 @@ public class C02_BasicAuthentication {
 
     // 1- Bir class olusturun : BasicAuthentication
 
-
-
     WebDriver driver;
     @BeforeClass
     public void setup(){
@@ -26,7 +24,6 @@ public class C02_BasicAuthentication {
         driver =new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
 
     }
 
@@ -44,15 +41,12 @@ public class C02_BasicAuthentication {
         // basic authenticaion isteyen web servisleri bize nasil ve hangi bilgilerle authentication
         // yapabilecegimiz bilgisini de vermek zorundadir
         // bizde dize tarif edilen yontem
-driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+    driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
 
         //4- Basarili sekilde sayfaya girildigini dogrulayin
 
         WebElement congratMesajElementi=driver.findElement(By.tagName("p"));
         Assert.assertTrue(congratMesajElementi.isDisplayed());
-
-
-
 
     }
 @AfterClass
@@ -60,6 +54,4 @@ public void tearDown(){
         driver.close();
 
 }
-
-
 }
