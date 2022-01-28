@@ -38,7 +38,7 @@ WebDriver driver;
 
     @Test
     public void test(){
-//2) sayfadaki iframe sayısını bulunuz.
+        //2) sayfadaki iframe sayısını bulunuz.
         List<WebElement> iframeList=driver.findElements(By.tagName("iframe"));
         System.out.println("iframeList sayisi= " + iframeList.size());
         //3) ilk iframe'deki (Youtube) play butonuna tıklayınız.
