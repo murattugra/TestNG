@@ -1,4 +1,4 @@
-package tests.day_11;
+package tests.day11;
 
 import org.testng.annotations.Test;
 import utilities.TestBase;
