@@ -10,7 +10,7 @@ import utilities.TestBase;
 import javax.swing.*;
 import java.util.Set;
 
-public class C03 extends TestBase {
+public class C03_MouseActions extends TestBase {
 
 @Test
     public void test01(){
