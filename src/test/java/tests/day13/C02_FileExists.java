@@ -29,6 +29,7 @@ public class C02_FileExists {
         System.out.println("user.dir:  "+System.getProperty("user.dir"));
 
         // MASA USTUNDE DENEME klasoru icinde Selenium.ods isminde bir dosya oldugunu test edin
+//*********** masaustunde Deneme klasoru ve selenium.ods dosyasi olmaasa calismaz
 
         // once bu dosyaya ulasmak icin gerekli dinamik path olusturulmali
         String dosyaYolu=System.getProperty("user.home")+"\\Desktop\\Deneme\\Selenium.ods";
