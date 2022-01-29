@@ -9,7 +9,7 @@ import utilities.TestBase;
 
 import javax.swing.*;
 
-public class C04 extends TestBase {
+public class C04_DragAndDrop  extends TestBase {
 
  // Yeni bir class olusturalim: MouseActions2
 

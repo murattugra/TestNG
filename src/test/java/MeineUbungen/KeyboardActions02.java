@@ -25,7 +25,8 @@ import utilities.TestBase;
             driver.get("https://html.com/tags/iframe/");
             //3- video’yu gorecek kadar asagi inin
             Actions actions=new Actions(driver);
-            actions.sendKeys(Keys.PAGE_DOWN).perform();
+            actions.sendKeys(Keys.PAGE_DOWN)
+                    .perform();
             //4- videoyu izlemek icin Play tusuna basin
             WebElement youtubeIframe=driver.findElement(By.xpath("//iframe[@class='lazy-loaded']"));
             driver.switchTo().frame(youtubeIframe);
