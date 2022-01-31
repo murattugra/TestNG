@@ -30,6 +30,7 @@ public class C02_MouseActions extends TestBase {
         Assert.assertTrue(actualTitle.contains(expectedTitle));
 
 
+
     }
 
 
