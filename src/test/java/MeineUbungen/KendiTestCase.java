@@ -18,10 +18,7 @@ public class KendiTestCase extends TestBase {
         driver.get("https://www.amazon.com/");
 
     }
-    @AfterMethod
-    public void tearDown01(){
-     driver.close();
-    }
+
 
     // test01
     // https://www.amazon.com/ adresine gidilir
