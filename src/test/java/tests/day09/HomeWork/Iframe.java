@@ -1,10 +1,12 @@
-package HomeWork;
+package tests.day09.HomeWork;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.TestBase;
+
+import java.util.Set;
 
 public class Iframe extends TestBase {
 
@@ -16,6 +18,7 @@ public class Iframe extends TestBase {
         // 1. “http://webdriveruniversity.com/IFrame/index.html” sayfasina gidin
         driver.get("http://webdriveruniversity.com/IFrame/index.html");
         //2. “Our Products” butonuna basin
+
         WebElement iframe=driver.findElement(By.tagName("iframe"));
         driver.switchTo().frame(iframe);
         driver.findElement(By.linkText("Our Products")).click();

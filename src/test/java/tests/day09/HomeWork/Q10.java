@@ -1,4 +1,4 @@
-package HomeWork;
+package tests.day09.HomeWork;
 
 public class Q10 {
 
