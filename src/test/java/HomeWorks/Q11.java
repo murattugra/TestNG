@@ -1,28 +1,15 @@
 package HomeWorks;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
-import java.time.Duration;
+import utilities.TestBase;
 import java.util.Set;
 
-public class Q11 {
+public class Q11 extends TestBase {
 
-WebDriver driver;
-@BeforeClass
-public void setup(){
-    WebDriverManager.chromedriver().setup();
-    driver =new ChromeDriver();
-    driver.manage().window().maximize();
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
-}
 
 @Test
 public void test01(){
@@ -60,7 +47,6 @@ public void test01(){
     softAssert.assertAll();
     //      switch to first window
     driver.switchTo().window(ilkSayfaHandle);
-
 
 
     }
