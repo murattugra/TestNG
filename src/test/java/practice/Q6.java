@@ -1,12 +1,10 @@
 package practice;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import utilities.TestBase;
 
-public class Odev02 extends TestBase {
+public class Q6 extends TestBase {
 
     //2.soru :Ingilizce
     //    go to url :http://demo.automationtesting.in/Alerts.html

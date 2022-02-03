@@ -8,11 +8,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import utilities.TestBase;
 
 import java.time.Duration;
 
-public class Odev01  {
+public class Q5 {
 
   //  soru :ingilizce
     //go to web site : https://www.jqueryscript.net/demo/bootstrap-alert-box/
