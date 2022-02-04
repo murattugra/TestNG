@@ -29,7 +29,7 @@ public class TestBase {
     @AfterClass
     public void tearDown() {
 
-    //driver.quit();
+    driver.quit();
     }
     public void tumSayfaScreenshot() throws IOException {
         TakesScreenshot tss= (TakesScreenshot) driver;
