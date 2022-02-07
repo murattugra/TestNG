@@ -1,4 +1,4 @@
-package tests.day13;
+package tests.day12.day13;
 
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
